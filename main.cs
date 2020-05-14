@@ -9,8 +9,21 @@ class MainClass {
 
     Console.WriteLine(); //pular linha **ESTETICA**
     Console.WriteLine("**SISTEMA DE SUPORTE DE TI**");
-    Console.WriteLine("Olá, digite 1 para cadastrar um novo cliente e 2 caso só queira ver a lista de clientes!");
+    Console.WriteLine(); //pular linha **ESTETICA**
+
+    Console.WriteLine("Oi, você precisa visualizar alguma empresa cadastrada? Digite 1 para SIM e 2 para NÃO!");
+      opcao = Console.ReadLine();
+      if (opcao == "1"){
+        string[] lines = File.ReadAllLines("empresas.txt");
+
+        foreach(var line in lines ) Console.WriteLine(line);
+      }
+
+    Console.WriteLine("#CADASTRO DE NOVO CLIENTE#");
+    Console.WriteLine("Digite 1 para cadastrar um novo cliente e 2 caso só queira ver a lista de clientes!");
     opcao = Console.ReadLine(); // variavel pra guardar a opçao do usuario
+
+
 
     if (opcao == "1"){ 
     
@@ -39,7 +52,7 @@ class MainClass {
     else{
       Console.WriteLine("Você deseja ver as empresas cadastradas? Digite 1 para sim e 2 para sair. ");
       opcao = Console.ReadLine();
-      if (opcao == 1){
+      if (opcao == "1"){
         string[] lines = File.ReadAllLines("clientescadastrados.txt");
 
           foreach(var line in lines) Console.WriteLine(line);
