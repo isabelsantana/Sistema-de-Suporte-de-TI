@@ -30,7 +30,4 @@ class ClassificacaoChamado{
       nivelChamado = value;
     }
   }
-
- 
-
 }

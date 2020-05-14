@@ -1,10 +1,13 @@
+using System;
+using System.IO;
 class CadastroDispositivo{
 
   private string memoria;
-  private string hd;
-  private string ssd;
-  private string placaDeVideo;
-  private string codigoDoComputador;
+  private string hostname;
+  private string ipInterno;
+  private string antivirus;
+  private string codigoComputador;
+  private string tipoDispositivo;
 
 
   public string Memoria{
@@ -15,23 +18,59 @@ class CadastroDispositivo{
       memoria = value;
     }
   }
-  
-  public string Hd{
+
+  public string Hostname{
     get{
-      return hd;
+      return hostname;
     }
     set{
-      hd = value;
+      hostname = value;
+    }
+  }
+  
+  public string IpInterno{
+    get{
+      return ipInterno;
+    }
+    set{
+      ipInterno = value;
     }
   }
 
-  public string Ssd{
+  public string Antivirus{
     get{
-      return ssd;
+      return antivirus;
     }
     set{
-      ssd = value;
+      antivirus = value;
     }
   }
+
+  public string CodigoDoComputador{
+    get{
+      return codigoComputador;
+    }
+    set{
+      codigoComputador = value;
+    }
+  }
+
+  public string TipoDispositivo{
+    get{
+      return tipoDispositivo;
+    }
+    set{
+      tipoDispositivo = value;
+    }
+  }
+
+  public static void novo(){
+    string[] lines = File.ReadAllLines("dispositivosCadastrados.txt");
+      foreach(var line in lines) Console.WriteLine(line);
+  
+  } 
+
+
+
 
 }

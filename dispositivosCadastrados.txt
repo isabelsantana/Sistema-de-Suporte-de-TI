@@ -1,0 +1,6 @@
+*** DISPOSITIVOS ***
+
+Memória: 16GB 
+IP Interno: 192.168.15.100
+Tipo de Dispositivo: Desktop / Notebook / Servidor 
+
