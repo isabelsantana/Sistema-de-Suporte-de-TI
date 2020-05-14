@@ -1,6 +1,9 @@
 *** DISPOSITIVOS ***
 
 Memória: 16GB 
+Hostname: Nome do host
 IP Interno: 192.168.15.100
+Antivirus: Sim
+Código do Computador: 230554
 Tipo de Dispositivo: Desktop / Notebook / Servidor 
 

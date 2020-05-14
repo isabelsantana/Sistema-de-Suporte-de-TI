@@ -4,7 +4,7 @@ using System.IO;
 class MainClass {
   public static void Main (string[] args) {
 
-    CadastroDispositivo novodisp = new CadastroDispositivo();
+    
     Cliente c = new Cliente();
 
     Console.WriteLine(); //pular linha **ESTETICA**
@@ -15,8 +15,7 @@ class MainClass {
       string opcao = Console.ReadLine(); // variavel pra guardar a opçao do usuario
         if (opcao == "1"){
           string[] lines = File.ReadAllLines("empresas.txt");
-
-          foreach(var line in lines ) Console.WriteLine(line);
+            foreach(var line in lines ) Console.WriteLine(line);
         }
 
     Console.WriteLine("#CADASTRO DE NOVO CLIENTE#");
@@ -26,25 +25,26 @@ class MainClass {
 
     if (opcao1 == "1"){  // Cadastro de novo cliente
 
-      Console.WriteLine("Informe o nome do cliente: ");
-      c.Nome = Console.ReadLine();
-      //Console.WriteLine(c.Nome); 
+      Console.Write("Nome: ");
+      c.Nome = Console.ReadLine(); 
       Console.WriteLine();
 
-      Console.WriteLine("Informe o telefone: ");
+      Console.Write("Telefone: ");
       c.Telefone = Console.ReadLine();
       Console.WriteLine();
 
-      Console.WriteLine("Informe o endereço do cliente: ");
+      Console.Write("Endereço: ");
       c.Endereco = Console.ReadLine();
       Console.WriteLine();
 
-      Console.WriteLine("Informe o código do cliente: ");
-      c.Codigo = int.Parse(Console.ReadLine());
+      Console.Write("Código: ");
+      c.Codigo = Console.ReadLine();
       Console.WriteLine();
         
       File.WriteAllText("cadastroCliente.txt", "**CADASTRO DO CLIENTE**\nNome: " +c.Nome + "\nTelefone: " +c.Telefone + "\nEndereco: "+c.Endereco +"\nCódigo: " +c.Codigo);
 
+
+      Console.WriteLine();
     }  
     else{
     Console.WriteLine("Você deseja ver as empresas cadastradas? Digite 1 para sim e 2 para sair. ");
@@ -54,5 +54,25 @@ class MainClass {
           foreach(var line in lines) Console.WriteLine(line);
       }
     }
+
+
+    CadastroDispositivo n = new CadastroDispositivo(); // INSTANCIA DE NOVO OBJETO ** CLASSE CADASTRO DISPOSITIVO **
+    
+    Console.WriteLine("*DISPOSITIVOS*");
+    n.disp = Console.ReadLine();
+    Console.WriteLine(n.disp);
+
+    CadastroDispositivo.Novo(); // MÉTODO PARA MOSTRAR O MODELO DE CADASTRO DE DISPOSITIVO PRO USUARIO
+
+    CadastroDispositivo.Dispo(); // MÉTODO PARA CADASTRO DE NOVO DISPOSITIVO
+
+    
+
+
+
+
+
+
+
   }
 }

@@ -24,10 +24,6 @@ Telefone: (27) 3324-1312
 
 ----------------------------------
 
-Nome:
-CNPJ:
-Endereço:
-Email:
-Telefone
+
 
 

@@ -3,7 +3,7 @@ class Cliente{
   private string endereco;
   private string telefone;
   private string nome;
-  private int codigo;
+  private string codigo;
 
   public string Endereco{
     get{
@@ -32,7 +32,7 @@ class Cliente{
     }
   }
 
-  public int Codigo{
+  public string Codigo{
     get{
       return codigo;
     }
