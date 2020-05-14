@@ -100,13 +100,10 @@ public class CadastroDispositivo{
     string tipoDispositivo = Console.ReadLine();
 
     File.WriteAllText("dispC.txt", "**NOVO CADASTRO**\n Memória: " +memoria +
-      "\nHostname: " +hostname +
-      "\nIP Interno: " +ipInterno + 
-      "\nAntiVirus: " +antivirus + 
-      "\nCódigo do Computador" +codigoComputador +
-      "\nTipo Do Dispositivo: " +tipoDispositivo);
-
-
-
+    "\nHostname: " +hostname +
+    "\nIP Interno: " +ipInterno + 
+    "\nAntiVirus: " +antivirus + 
+    "\nCódigo do Computador" +codigoComputador +
+    "\nTipo Do Dispositivo: " +tipoDispositivo);
   }
 }

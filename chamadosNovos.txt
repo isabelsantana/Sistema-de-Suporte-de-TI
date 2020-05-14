@@ -1,0 +1,5 @@
+**NOVO CHAMADO**
+ Cliente: siicid
+Contato do Cliente: dfs
+Tipo Do Dispositivo: f151;22Rds
+Problema: f151;24Rdf

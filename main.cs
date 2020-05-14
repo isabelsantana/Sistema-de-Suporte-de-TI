@@ -2,16 +2,37 @@ using System;
 using System.IO;
 
 class MainClass {
-  public static void Main (string[] args) {
+
+  public static void Nome(){ 
+    
+    Console.WriteLine("\n**MENU**\n");
+ 
+    Console.WriteLine("  --DIGITE QUAL SERVIÇO VOCÊ DESEJA REALIZAR--  \n");
+    Console.WriteLine("1 - Vizualizar empresas cadastradas");
+    Console.WriteLine("2 - Cadastrar empresa");
+    Console.WriteLine("3 - Criar chamado");
+    Console.WriteLine("4 - Descobrir como cadastrar um novo dispositivo");
+    Console.WriteLine("5 - Cadastrar novo dispositivo");
+    string serv = Console.ReadLine();
 
     
+
+
+
+    }
+
+  public static void Main (string[] args) {
+
     Cliente c = new Cliente();
+    Nome(); // função pra mostrar o menu
+    
 
-    Console.WriteLine(); //pular linha **ESTETICA**
-    Console.WriteLine("**SISTEMA DE SUPORTE DE TI**");
-    Console.WriteLine(); //pular linha **ESTETICA**
 
-    Console.WriteLine("Para vizualizar as empresas cadastradas digite 1 para SIM e 2 para NÃO!");
+
+   
+    Console.WriteLine(" \n **SISTEMA DE SUPORTE DE TI**\n  ");
+
+    Console.WriteLine("Digite 1 para vizualizar e 2 para NÃO!");
       string opcao = Console.ReadLine(); // variavel pra guardar a opçao do usuario
         if (opcao == "1"){
           string[] lines = File.ReadAllLines("empresas.txt");
@@ -65,6 +86,10 @@ class MainClass {
     CadastroDispositivo.Novo(); // MÉTODO PARA MOSTRAR O MODELO DE CADASTRO DE DISPOSITIVO PRO USUARIO
 
     CadastroDispositivo.Dispo(); // MÉTODO PARA CADASTRO DE NOVO DISPOSITIVO
+
+    CriacaoChamado a = new CriacaoChamado();
+
+    CriacaoChamado.Chamado(); //MÉTODO PARA CRIAR NOVO CHAMADO
 
     
 
