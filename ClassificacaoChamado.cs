@@ -1,4 +1,6 @@
-class Chamado{
+class ClassificacaoChamado{
+  
+
 
  
 
