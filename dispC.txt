@@ -1,7 +1,7 @@
 **NOVO CADASTRO**
- Memória: kfjdg
-Hostname: kg
-IP Interno: sf
-AntiVirus: fd
-Código do Computadorfsf
-Tipo Do Dispositivo: d
+ Memória: 2
+Hostname: 1
+IP Interno: 2
+AntiVirus: 3
+Código do Computador1
+Tipo Do Dispositivo: 4

@@ -68,7 +68,7 @@ public class CadastroDispositivo{
 
   public static void Novo(){ // MÉTODO PARA MOSTRAR MODELO DE CADASTRO DE NOVO DISPOSITIVO
     Console.WriteLine("**MODELO DE CADASTRO DE NOVO DISPOSITIVO**");
-    Console.WriteLine("Digite 1"); 
+   Console.WriteLine("Digite 1"); 
     string opcao2 = Console.ReadLine();
 
     if (opcao2 == "1"){

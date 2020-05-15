@@ -3,79 +3,50 @@ using System.IO;
 
 class MainClass {
 
-  public static void Nome(){ 
+  public static void Nome(){  // FUNÇÃO PARA MOSTRAR O MENU
     
-    Console.WriteLine("\n**MENU**\n");
+    Console.WriteLine("\n---------------------**M E N U**---------------------\n");
  
     Console.WriteLine("  --DIGITE QUAL SERVIÇO VOCÊ DESEJA REALIZAR--  \n");
     Console.WriteLine("1 - Vizualizar empresas cadastradas");
-    Console.WriteLine("2 - Cadastrar empresa");
+    Console.WriteLine("2 - Cadastrar cliente");
     Console.WriteLine("3 - Criar chamado");
     Console.WriteLine("4 - Descobrir como cadastrar um novo dispositivo");
-    Console.WriteLine("5 - Cadastrar novo dispositivo");
+    Console.WriteLine("5 - Cadastrar novo dispositivo\n");
     string serv = Console.ReadLine();
-
     
 
-
-
+    if (serv == "1"){
+      string[] lines = File.ReadAllLines("empresas.txt");
+        foreach(var line in lines ) Console.WriteLine(line); // ARQUIVO PARA MOSTRAR AS EMPRESAS CADASTRADAS
+    } 
+    else if (serv == "2"){
+      Cliente.Cadastro(); // MÉTODO PARA CADASTRAR CLIENTE
     }
+    else if(serv == "3"){
+      CriacaoChamado.Chamado(); //MÉTODO PARA CRIAR NOVO CHAMADO
+    } 
+    else if(serv == "4"){
+      CadastroDispositivo.Novo(); // MÉTODO PARA MOSTRAR O MODELO DE CADASTRO DE DISPOSITIVO PRO USUARIO
+    }
+    else if(serv == "5"){
+      CadastroDispositivo.Dispo(); // // MÉTODO PARA CADASTRO DE NOVO DISPOSITIVO
+    }
+    else{
+      Console.WriteLine("\nDigite um número válido!");
+      Nome();
+    }
+      
+  }
+
+
+  
 
   public static void Main (string[] args) {
 
     Cliente c = new Cliente();
     Nome(); // função pra mostrar o menu
     
-
-
-
-   
-    Console.WriteLine(" \n **SISTEMA DE SUPORTE DE TI**\n  ");
-
-    Console.WriteLine("Digite 1 para vizualizar e 2 para NÃO!");
-      string opcao = Console.ReadLine(); // variavel pra guardar a opçao do usuario
-        if (opcao == "1"){
-          string[] lines = File.ReadAllLines("empresas.txt");
-            foreach(var line in lines ) Console.WriteLine(line);
-        }
-
-    Console.WriteLine("#CADASTRO DE NOVO CLIENTE#");
-    Console.WriteLine("Digite 1 para cadastrar um novo cliente e 2 caso só queira ver a lista de clientes!");
-    string opcao1 = Console.ReadLine(); // variavel pra guardar a opçao do usuario
-
-
-    if (opcao1 == "1"){  // Cadastro de novo cliente
-
-      Console.Write("Nome: ");
-      c.Nome = Console.ReadLine(); 
-      Console.WriteLine();
-
-      Console.Write("Telefone: ");
-      c.Telefone = Console.ReadLine();
-      Console.WriteLine();
-
-      Console.Write("Endereço: ");
-      c.Endereco = Console.ReadLine();
-      Console.WriteLine();
-
-      Console.Write("Código: ");
-      c.Codigo = Console.ReadLine();
-      Console.WriteLine();
-        
-      File.WriteAllText("cadastroCliente.txt", "**CADASTRO DO CLIENTE**\nNome: " +c.Nome + "\nTelefone: " +c.Telefone + "\nEndereco: "+c.Endereco +"\nCódigo: " +c.Codigo);
-
-
-      Console.WriteLine();
-    }  
-    else{
-    Console.WriteLine("Você deseja ver as empresas cadastradas? Digite 1 para sim e 2 para sair. ");
-      opcao = Console.ReadLine();
-      if (opcao == "1"){
-        string[] lines = File.ReadAllLines("clientescadastrados.txt");
-          foreach(var line in lines) Console.WriteLine(line);
-      }
-    }
-
 
     CadastroDispositivo n = new CadastroDispositivo(); // INSTANCIA DE NOVO OBJETO ** CLASSE CADASTRO DISPOSITIVO **
     
@@ -99,5 +70,5 @@ class MainClass {
 
 
 
-  }
+  }  
 }
