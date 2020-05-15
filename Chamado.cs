@@ -8,6 +8,8 @@ class Chamado{
   private string email;
   private string tipoDispositivo;
   private string problema;
+  private string tipo;
+  private string nivel;
 
   public string Cliente{
     get{
@@ -54,6 +56,22 @@ class Chamado{
     }
   }
 
+  public string Tipo{
+    get{
+      return tipo;
+    }
+    set{
+      tipo = value;
+    }
+  }
+  public string Nivel{
+    get{
+      return nivel;
+    }
+    set{
+      nivel = value;
+    }
+  }
   public void CriarChamado(){ // Método para criar chamado
 
     Console.WriteLine("**CRIAR CHAMADO**\n");
@@ -78,11 +96,15 @@ class Chamado{
     Problema = Console.ReadLine();
     Console.WriteLine();
 
-    File.WriteAllText("chamadosNovos.txt", "**NOVO CHAMADO**\n Cliente: " +cliente +
-      "\nTelefone: " +telefone +
-      "\nEmail: " +email +
-      "\nTipo Do Dispositivo: " +tipoDispositivo + 
-      "\nProblema: " +problema);
+    Console.Write("Tipo do chamado (hardware/software): ");
+    Tipo = Console.ReadLine();
+    Console.WriteLine();
+
+    Console.Write("Nível do chamado (baixo/médio/alto): ");
+    Nivel = Console.ReadLine();
+    Console.WriteLine();
+
+    File.WriteAllText("chamadosNovos.txt", "**NOVO CHAMADO**\n Cliente: " + cliente + "\nTelefone: " + telefone +"\nEmail: " + email + "\nTipo Do Dispositivo: " + tipoDispositivo + "\nProblema: " + problema + "\nTipo do chamado (Hardware/Software): "+ tipo + "\nNível do chamado (baixo/médio/alto): " + nivel);
   }    
 
 

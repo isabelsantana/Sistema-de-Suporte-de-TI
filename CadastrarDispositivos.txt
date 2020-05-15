@@ -1,7 +1,7 @@
 **NOVO CADASTRO**
- Memória: yf
-Hostname: das
-IP Interno: cas
-AntiVirus: das
-Código do Computadorcsa
-Tipo Do Dispositivo: ds
+ Memória: 546
+Hostname: 213
+IP Interno: 465
+AntiVirus: 123
+Código do Computador654
+Tipo Do Dispositivo: 12

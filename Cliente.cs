@@ -70,7 +70,18 @@ class Cliente{
 
   public void ExibirEmpresasCadastradas(){
     string[] lines = File.ReadAllLines("empresas.txt");
-      foreach(var line in lines) Console.WriteLine(line);
-  }
+    int qtdLinhas = 0;
+    int linha = 2;
+    string nomeEmpresa;
 
+    foreach(var line in lines) qtdLinhas ++;
+
+    while (linha <= qtdLinhas)
+    {
+      nomeEmpresa = lines[linha];
+      Console.WriteLine(nomeEmpresa);
+      linha = linha+8;
+    }
+  }
 }
+
