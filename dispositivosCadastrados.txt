@@ -1,4 +1,4 @@
-*** MODELO DISPOSITIVOS ***
+*** MODELO DE DESCRIÇÃO ***
 
 Memória: 16GB 
 Hostname: Nome do host

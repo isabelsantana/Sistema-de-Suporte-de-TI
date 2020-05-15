@@ -1,7 +1,0 @@
-**NOVO CADASTRO**
- Memória: 2
-Hostname: 1
-IP Interno: 2
-AntiVirus: 3
-Código do Computador1
-Tipo Do Dispositivo: 4

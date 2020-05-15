@@ -1,0 +1,8 @@
+---------------------** C A T A L O G O **---------------------
+
+1 - Vizualizar empresas cadastradas
+2 - Cadastrar cliente
+3 - Criar chamado
+4 - Como cadastrar um novo dispositivo
+5 - Cadastrar novo dispositivo
+6 - Exibir clientes cadastrados

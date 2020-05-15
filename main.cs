@@ -2,18 +2,53 @@ using System;
 using System.IO;
 
 class MainClass {
+  public static void Main (string[] args) {
 
-  public static void Nome(){  // FUNÇÃO PARA MOSTRAR O MENU
+  string opcao;
+  Catalogo catalogo = new Catalogo(); // Instanciando Objeto   
+  Chamado chamado = new Chamado();
+  Cliente cliente = new Cliente();
+  Dispositivo dispositivo = new Dispositivo();
+  
+  Console.WriteLine(" ** BEM VINDO AO SEU SUPORTE DE TI ** ");
+  catalogo.ExibirCatalogo(); // Chamando método
+
+  Console.WriteLine("Digite o código do serviço desejado: ");
+  opcao = Console.ReadLine();
+
+  if (opcao == "1"){ // Menu interativo para o usuario 
+    cliente.ExibirEmpresasCadastradas();
+  }
+  if (opcao == "2"){
+    cliente.CadastroCliente(); 
+  } 
+  if (opcao == "3"){
+    chamado.CriarChamado();
+  }
+  if (opcao == "4"){
+    dispositivo.ExibirModelo();
+
+  }
+  if (opcao == "5"){
+    dispositivo.CadastrarDispositivo();    
+  }
+  if (opcao == "6"){
     
-    Console.WriteLine("\n---------------------**M E N U**---------------------\n");
- 
-    Console.WriteLine("  --DIGITE QUAL SERVIÇO VOCÊ DESEJA REALIZAR--  \n");
-    Console.WriteLine("1 - Vizualizar empresas cadastradas");
-    Console.WriteLine("2 - Cadastrar cliente");
-    Console.WriteLine("3 - Criar chamado");
-    Console.WriteLine("4 - Descobrir como cadastrar um novo dispositivo");
-    Console.WriteLine("5 - Cadastrar novo dispositivo\n");
-    string serv = Console.ReadLine();
+
+  }
+
+  
+
+
+
+
+
+
+
+
+
+ /* 
+
     
 
     if (serv == "1"){
@@ -48,19 +83,19 @@ class MainClass {
     Nome(); // função pra mostrar o menu
     
 
-    CadastroDispositivo n = new CadastroDispositivo(); // INSTANCIA DE NOVO OBJETO ** CLASSE CADASTRO DISPOSITIVO **
+   // CadastroDispositivo n = new CadastroDispositivo(); // INSTANCIA DE NOVO OBJETO ** CLASSE CADASTRO DISPOSITIVO **
     
-    Console.WriteLine("*DISPOSITIVOS*");
+   /* Console.WriteLine("*DISPOSITIVOS*");
     n.disp = Console.ReadLine();
-    Console.WriteLine(n.disp);
+    Console.WriteLine(n.disp);*/
 
-    CadastroDispositivo.Novo(); // MÉTODO PARA MOSTRAR O MODELO DE CADASTRO DE DISPOSITIVO PRO USUARIO
+   // CadastroDispositivo.Novo(); // MÉTODO PARA MOSTRAR O MODELO DE CADASTRO DE DISPOSITIVO PRO USUARIO
 
-    CadastroDispositivo.Dispo(); // MÉTODO PARA CADASTRO DE NOVO DISPOSITIVO
+    //CadastroDispositivo.Dispo(); // MÉTODO PARA CADASTRO DE NOVO DISPOSITIVO
 
-    CriacaoChamado a = new CriacaoChamado();
+   // CriacaoChamado a = new CriacaoChamado();
 
-    CriacaoChamado.Chamado(); //MÉTODO PARA CRIAR NOVO CHAMADO
+   // CriacaoChamado.Chamado(); //MÉTODO PARA CRIAR NOVO CHAMADO*/
 
     
 
@@ -70,5 +105,5 @@ class MainClass {
 
 
 
-  }  
-}
+  }
+}   

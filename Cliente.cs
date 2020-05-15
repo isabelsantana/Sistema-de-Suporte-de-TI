@@ -44,28 +44,33 @@ class Cliente{
     }
   }
   
-  public static void Cadastro(){
+  public void CadastroCliente(){ // metodo para cadastrar cliente
 
-    Console.WriteLine("\n  #CADASTRO DE NOVO CLIENTE#\n");
+    Console.WriteLine("\n  #CADASTRO DE NOVO CLIENTE#\n ");
 
     Console.Write("Nome: ");
-    string nome = Console.ReadLine(); 
+    Nome = Console.ReadLine(); 
     Console.WriteLine();
 
     Console.Write("Telefone: ");
-    string telefone = Console.ReadLine();
+    Telefone = Console.ReadLine();
     Console.WriteLine();
 
     Console.Write("Endereço: ");
-    string endereco = Console.ReadLine();
+    Endereco = Console.ReadLine();
     Console.WriteLine();
 
     Console.Write("Código: ");
-    string codigo = Console.ReadLine();
+    Codigo = Console.ReadLine();
     Console.WriteLine();
         
-    File.WriteAllText("cadastroCliente.txt", "**CADASTRO DO CLIENTE**\nNome: " +nome + "\nTelefone: " +telefone + "\nEndereco: "+endereco +"\nCódigo: " +codigo);
+    File.WriteAllText("cadastroCliente.txt", "**CADASTRO DO CLIENTE**\nNome: " +Nome + "\nTelefone: " +Telefone + "\nEndereco: "+Endereco +"\nCódigo: " +Codigo);
 
+  }
+
+  public void ExibirEmpresasCadastradas(){
+    string[] lines = File.ReadAllLines("empresas.txt");
+      foreach(var line in lines) Console.WriteLine(line);
   }
 
 }

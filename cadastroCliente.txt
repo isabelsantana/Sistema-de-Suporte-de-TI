@@ -1,5 +1,5 @@
 **CADASTRO DO CLIENTE**
-Nome: isabel
-Telefone: husda
-Endereco: das
-Código: asdd
+Nome: dsf
+Telefone: 2
+Endereco: d
+Código: c

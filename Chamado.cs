@@ -1,10 +1,11 @@
 using System;
 using System.IO;
 
-class CriacaoChamado{
+class Chamado{
 
   private string cliente;
-  private string contatoCliente;
+  private string telefone;
+  private string email;
   private string tipoDispositivo;
   private string problema;
 
@@ -17,12 +18,21 @@ class CriacaoChamado{
     }
   }
 
-  public string ContatoCliente{
+  public string Telefone{
     get{
-      return contatoCliente;
+      return telefone;
     }
     set{
-      contatoCliente = value; 
+      telefone = value; 
+    }
+  }
+
+   public string Email{
+    get{
+      return email;
+    }
+    set{
+      email = value; 
     }
   }
 
@@ -44,24 +54,33 @@ class CriacaoChamado{
     }
   }
 
-  public static void Chamado(){ // Método para criar chamado
+  public void CriarChamado(){ // Método para criar chamado
 
     Console.WriteLine("**CRIAR CHAMADO**\n");
 
-    Console.Write("Cliente (Físico / Jurídico): ");
-    string cliente = Console.ReadLine();
+    Console.Write("Cliente: ");
+    Cliente = Console.ReadLine();
+    Console.WriteLine();
 
-    Console.Write("Contato do Cliente: ");
-    string contato = Console.ReadLine();
+    Console.Write("Telefone: ");
+    Telefone = Console.ReadLine();
+    Console.WriteLine();
+
+    Console.Write("Email: ");
+    Email = Console.ReadLine();
+    Console.WriteLine();
 
     Console.Write("Tipo do Dispositivo: ");
-    string tipoDispositivo = Console.ReadLine();
+    TipoDispositivo = Console.ReadLine();
+    Console.WriteLine();
 
     Console.Write("Descreva seu problema: ");
-    string problema = Console.ReadLine();
+    Problema = Console.ReadLine();
+    Console.WriteLine();
 
     File.WriteAllText("chamadosNovos.txt", "**NOVO CHAMADO**\n Cliente: " +cliente +
-      "\nContato do Cliente: " +contato +
+      "\nTelefone: " +telefone +
+      "\nEmail: " +email +
       "\nTipo Do Dispositivo: " +tipoDispositivo + 
       "\nProblema: " +problema);
   }    

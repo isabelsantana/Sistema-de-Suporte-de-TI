@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-public class CadastroDispositivo{
+public class Dispositivo{
 
   private string memoria;
   private string hostname;
@@ -66,44 +66,43 @@ public class CadastroDispositivo{
     }
   }
 
-  public static void Novo(){ // MÉTODO PARA MOSTRAR MODELO DE CADASTRO DE NOVO DISPOSITIVO
-    Console.WriteLine("**MODELO DE CADASTRO DE NOVO DISPOSITIVO**");
-   Console.WriteLine("Digite 1"); 
-    string opcao2 = Console.ReadLine();
+  public void ExibirModelo(){ // MÉTODO PARA MOSTRAR MODELO DE CADASTRO DE NOVO DISPOSITIVO
 
-    if (opcao2 == "1"){
       string[] lines = File.ReadAllLines("dispositivosCadastrados.txt");
       foreach(var line in lines) Console.WriteLine(line);
     } 
-  }
 
-  public static void Dispo(){ // Método para cadastrar dispositivo
+
+  public void CadastrarDispositivo(){ // Método para cadastrar dispositivo
     
     Console.WriteLine("**CADASTRE SEU DISPOSITIVO**\n");
 
     Console.Write("Memória: ");
-    string memoria = Console.ReadLine();
+    Memoria = Console.ReadLine();
+    Console.WriteLine();
 
     Console.Write("Hostname: ");
-    string hostname = Console.ReadLine();
+    Hostname = Console.ReadLine();
+    Console.WriteLine();
 
     Console.Write("IP Interno: ");
-    string ipInterno = Console.ReadLine();
+    IpInterno = Console.ReadLine();
+    Console.WriteLine();
 
     Console.Write("AntiVírus: ");
-    string antivirus = Console.ReadLine();
+    Antivirus = Console.ReadLine();
+    Console.WriteLine();
 
     Console.Write("Código do Computador: ");
-    string codigoComputador = Console.ReadLine();
+    CodigoComputador = Console.ReadLine();
+    Console.WriteLine();
 
     Console.Write("Tipo do Dispositivo: ");
-    string tipoDispositivo = Console.ReadLine();
+    TipoDispositivo = Console.ReadLine();
+    Console.WriteLine();
 
-    File.WriteAllText("dispC.txt", "**NOVO CADASTRO**\n Memória: " +memoria +
-    "\nHostname: " +hostname +
-    "\nIP Interno: " +ipInterno + 
-    "\nAntiVirus: " +antivirus + 
-    "\nCódigo do Computador" +codigoComputador +
-    "\nTipo Do Dispositivo: " +tipoDispositivo);
-  }
+    File.WriteAllText("CadastrarDispositivos.txt", "**NOVO CADASTRO**\n Memória: " + Memoria +"\nHostname: " + Hostname + "\nIP Interno: " + IpInterno + "\nAntiVirus: " + Antivirus + "\nCódigo do Computador" + CodigoComputador + "\nTipo Do Dispositivo: " + TipoDispositivo);
+    
+  }  
 }
+  
