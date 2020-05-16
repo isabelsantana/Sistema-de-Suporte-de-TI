@@ -3,10 +3,10 @@ using System.IO;
 
 class Cliente{
 
-  private string endereco;
-  private string telefone;
-  private string nome;
-  private string codigo;
+  protected string endereco;
+  protected string telefone;
+  protected string nome;
+  protected string codigo;
 
   public string Endereco{
     get{
@@ -44,10 +44,12 @@ class Cliente{
     }
   }
   
+  
   public void CadastroCliente(){ // metodo para cadastrar cliente
 
-    Console.WriteLine("\n  #CADASTRO DE NOVO CLIENTE#\n ");
-
+    Console.WriteLine("\n  ---**CADASTRO DE NOVO CLIENTE**--- \n ");
+  
+    
     Console.Write("Nome: ");
     Nome = Console.ReadLine(); 
     Console.WriteLine();

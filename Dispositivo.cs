@@ -75,7 +75,7 @@ public class Dispositivo{
 
   public void CadastrarDispositivo(){ // Método para cadastrar dispositivo
     
-    Console.WriteLine("**CADASTRE SEU DISPOSITIVO**\n");
+    Console.WriteLine("\n---**CADASTRE SEU DISPOSITIVO**--- \n");
 
     Console.Write("Memória: ");
     Memoria = Console.ReadLine();

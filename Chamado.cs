@@ -74,7 +74,7 @@ class Chamado{
   }
   public void CriarChamado(){ // Método para criar chamado
 
-    Console.WriteLine("**CRIAR CHAMADO**\n");
+    Console.WriteLine("---**CRIAR CHAMADO**---\n");
 
     Console.Write("Cliente: ");
     Cliente = Console.ReadLine();
